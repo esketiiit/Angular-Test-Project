@@ -1,0 +1,57 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}
+  </h1>
+</div>
+
+<div> Months:
+  <select (change) = "changeMonth($event)">
+    <option *ngFor = "let month of months">{{month}}</option>
+  </select>
+</div>
+<br/>
+
+<!-- If statements -->
+<div>
+  <!-- This is only shown if isAvailable is true -->
+  <!-- <span *ngIf = "isAvailable">Condition is true.</span> -->
+
+  <!-- This is shown if isAvailable is true -->
+  <!-- <span *ngIf = "isAvailable; else isNotAvailable">Condition is true.</span> -->
+  <!-- This is shown if isAvailable is false -->
+  <!-- <ng-template #isNotAvailable>Condition is false.</ng-template> -->
+
+  <span *ngIf = "isAvailable; then condition1 else condition2">Condition is valid.</span>
+  <ng-template #condition1>Condition is true.</ng-template>
+  <ng-template #condition2>Condition is false.</ng-template>
+</div>
+
+
+<!-- Button with event handler -->
+<button (click)="btnClickFunction($event)">
+  Click me
+</button>
+<br/>
+
+<a routerLink = "new-cmp">New Component</a>
+
+<!-- <app-new-cmp></app-new-cmp> -->
+
+<p>List Example</p>
+<ul *ngFor = "let data of httpData">
+  <li>Name: {{ data.name }} <br/>
+      Address: {{ data.address.city }}
+  </li>
+</ul>
+
+
+<p>Form Example</p>
+<form #userLogin = "ngForm" (ngSubmit) = "onSubmitClick(userLogin.value)">
+  <input type = "text" name = "email" placeholder = "Email" ngModel>
+  <br/>
+  <input type = "password" name = "passwd" placeholder = "Password" ngModel>
+  <br/>
+  <input type = "submit" value = "Submit">
+</form>
+
+<router-outlet></router-outlet>
