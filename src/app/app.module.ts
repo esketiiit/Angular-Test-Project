@@ -6,23 +6,21 @@ import { RouterModule} from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NewCmpComponent } from './new-cmp/new-cmp.component';
+import { NavbarCmpComponent } from './navbar-cmp/navbar-cmp.component';
+import { HomeCmpComponent } from './home-cmp/home-cmp.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NewCmpComponent
+    NewCmpComponent,
+    NavbarCmpComponent,
+    HomeCmpComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
-    AppRoutingModule,
-    RouterModule.forRoot([
-      {
-        path: 'new-cmp',
-        component: NewCmpComponent
-      }
-    ])
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

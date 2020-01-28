@@ -1,4 +1,4 @@
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{title}}
   </h1>
@@ -9,10 +9,10 @@
     <option *ngFor = "let month of months">{{month}}</option>
   </select>
 </div>
-<br/>
+<br/> -->
 
 <!-- If statements -->
-<div>
+<!-- <div> -->
   <!-- This is only shown if isAvailable is true -->
   <!-- <span *ngIf = "isAvailable">Condition is true.</span> -->
 
@@ -21,23 +21,23 @@
   <!-- This is shown if isAvailable is false -->
   <!-- <ng-template #isNotAvailable>Condition is false.</ng-template> -->
 
-  <span *ngIf = "isAvailable; then condition1 else condition2">Condition is valid.</span>
+  <!-- <span *ngIf = "isAvailable; then condition1 else condition2">Condition is valid.</span>
   <ng-template #condition1>Condition is true.</ng-template>
   <ng-template #condition2>Condition is false.</ng-template>
-</div>
+</div> -->
 
 
 <!-- Button with event handler -->
-<button (click)="btnClickFunction($event)">
+<!-- <button (click)="btnClickFunction($event)">
   Click me
 </button>
 <br/>
 
-<a routerLink = "new-cmp">New Component</a>
+<a routerLink = "new-cmp">New Component</a> -->
 
 <!-- <app-new-cmp></app-new-cmp> -->
 
-<p>List Example</p>
+<!-- <p>List Example</p>
 <ul *ngFor = "let data of httpData">
   <li>Name: {{ data.name }} <br/>
       Address: {{ data.address.city }}
@@ -52,6 +52,12 @@
   <input type = "password" name = "passwd" placeholder = "Password" ngModel>
   <br/>
   <input type = "submit" value = "Submit">
-</form>
+</form> -->
 
-<router-outlet></router-outlet>
+<div id="container">
+  <app-navbar-cmp></app-navbar-cmp>
+
+  <div id="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

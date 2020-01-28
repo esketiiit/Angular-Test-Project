@@ -8,44 +8,45 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'test-project';
-  // Declared array of months
-  months = ["January", "Feburary", "March", "April", "May", 
-            "June", "July", "August", "September",
-            "October", "November", "December"];
-  isAvailable = true;
-  httpData;
+  title = "TestProject"
+  // title = 'test-project';
+  // // Declared array of months
+  // months = ["January", "Feburary", "March", "April", "May", 
+  //           "June", "July", "August", "September",
+  //           "October", "November", "December"];
+  // isAvailable = true;
+  // httpData;
 
-  constructor(private http: Http) { }
+  // constructor(private http: Http) { }
 
-  ngOnInit() 
-  {
-     this.http.get("http://jsonplaceholder.typicode.com/users?id=2")
-     .pipe(map((response) => response.json()))
-     .subscribe((data) => this.displaydata(data));
-  }
+  // ngOnInit() 
+  // {
+  //    this.http.get("http://jsonplaceholder.typicode.com/users?id=2")
+  //    .pipe(map((response) => response.json()))
+  //    .subscribe((data) => this.displaydata(data));
+  // }
  
-  displaydata(data) 
-  {
-    this.httpData = data;
-    console.log(data)
-  }
+  // displaydata(data) 
+  // {
+  //   this.httpData = data;
+  //   console.log(data)
+  // }
 
-  changeMonth(event) 
-  {
-    console.log('Change month from dropdown')
-    console.log(event)
-  }
+  // changeMonth(event) 
+  // {
+  //   console.log('Change month from dropdown')
+  //   console.log(event)
+  // }
 
-  btnClickFunction(event) 
-  {
-    // Simple console.log and alart
-    console.log(event)
-    this.isAvailable = !this.isAvailable
-  }
+  // btnClickFunction(event) 
+  // {
+  //   // Simple console.log and alart
+  //   console.log(event)
+  //   this.isAvailable = !this.isAvailable
+  // }
 
-  onSubmitClick(data)
-  {
-    alert("Entered Email: " + data.email)
-  }
+  // onSubmitClick(data)
+  // {
+  //   alert("Entered Email: " + data.email)
+  // }
 }
