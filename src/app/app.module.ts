@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { NewCmpComponent } from './new-cmp/new-cmp.component';
 import { NavbarCmpComponent } from './navbar-cmp/navbar-cmp.component';
 import { HomeCmpComponent } from './home-cmp/home-cmp.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewCmpComponent,
     NavbarCmpComponent,
-    HomeCmpComponent
+    HomeCmpComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
