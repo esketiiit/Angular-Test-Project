@@ -7,12 +7,12 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
 
-        <li class="nav-item active">
-          <a class="nav-link" routerLink="">Hjem <span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="" [ngClass]="{ 'active': currentTab == '/' }">Hjem <span class="sr-only">(current)</span></a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" routerLink="test">Test</a>
+          <a class="nav-link" routerLink="test" [ngClass]="{ 'active': currentTab.includes('test') }">Test</a>
         </li>
 
         <li class="nav-item dropdown">
